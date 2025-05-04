@@ -9,8 +9,8 @@ moment.locale('ar');
 export default function WeatherUI() {
     const [temp, setTemp] = useState({ temp: 0, tempMin: 0, tempMax: 0, description: '', icon: '' });
     const [dataAndTime, setDataAndTime] = useState('');
-    const { t, i18n } = useTranslation();
     const [locale, setLocale] = useState('ar');
+    const { t, i18n } = useTranslation();
 
     function changeLang() {
         if (locale == "en") {
