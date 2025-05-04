@@ -59,7 +59,7 @@ export default function WeatherUI() {
 
     return (
         <Container maxWidth="sm">
-            {/* CONTENT CONTAINER */}
+            {/* Container */}
             <div
                 style={{
                     height: "100vh",
@@ -69,7 +69,7 @@ export default function WeatherUI() {
                     flexDirection: "column",
                 }}
             >
-                {/* CARD */}
+                {/* card */}
                 <div
                     dir={locale === 'ar' ? 'rtl' : 'ltr'}
                     style={{
@@ -81,9 +81,9 @@ export default function WeatherUI() {
                         boxShadow: "0px 11px 1px rgba(0,0,0,0.05)",
                     }}
                 >
-                    {/* CONTENT */}
+                    {/* content */}
                     <div>
-                        {/* CITY & TIME */}
+                        {/* city & time */}
                         <div
                             style={{
                                 display: "flex",
@@ -109,20 +109,18 @@ export default function WeatherUI() {
                                 {dataAndTime}
                             </Typography>
                         </div>
-                        {/* == CITY & TIME == */}
 
                         <hr />
 
-                        {/* CONTAINER OF DEGREE + CLOUD ICON */}
                         <div
                             style={{
                                 display: "flex",
                                 justifyContent: "space-around",
                             }}
                         >
-                            {/* DEGREE & DESCRIPTION */}
+                            {/* degree & description */}
                             <div>
-                                {/* TEMP */}
+                                {/* temp */}
                                 <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                                     <Typography
                                         variant="h1"
@@ -137,13 +135,11 @@ export default function WeatherUI() {
                                     {/* Weather Icon */}
                                     <img src={`https://openweathermap.org/img/wn/${temp.icon}@2x.png`} alt="" />
                                 </div>
-                                {/*== TEMP ==*/}
-
                                 <Typography variant="h6" style={{ margin: "10px 0" }}>
                                     {t(temp.description)}
                                 </Typography>
 
-                                {/* MIN & MAX */}
+                                {/* min & max */}
                                 <div
                                     style={{
                                         display: "flex",
@@ -159,15 +155,13 @@ export default function WeatherUI() {
                                     </h5>
                                     <h5 style={{ margin: "0px 5px" }}>|</h5>
                                     <h5>
-                                        {locale === "ar" ? "الكبرى" : "max"} :
+                                        {locale == "ar" ? "الكبرى" : "max"} :
                                         <span style={{ unicodeBidi: "plaintext", margin: "0 10px", direction: locale === 'ar' ? 'rtl' : 'ltr' }}>
                                             {temp.tempMax}°
                                         </span>
                                     </h5>
                                 </div>
                             </div>
-                            {/*== DEGREE & DESCRIPTION ==*/}
-
                             <CloudIcon
                                 style={{
                                     fontSize: "200px",
@@ -175,13 +169,8 @@ export default function WeatherUI() {
                                 }}
                             />
                         </div>
-                        {/*= CONTAINER OF DEGREE + CLOUD ICON ==*/}
                     </div>
-                    {/* == CONTENT == */}
                 </div>
-                {/*== CARD ==*/}
-
-                {/* TRANSLATION CONTAINER */}
                 <div
                     dir={locale === 'ar' ? 'rtl' : 'ltr'}
                     style={{
@@ -195,9 +184,7 @@ export default function WeatherUI() {
                         {locale === 'en' ? 'Arabic' : 'English'}
                     </Button>
                 </div>
-                {/*== TRANSLATION CONTAINER ==*/}
             </div>
-            {/*== CONTENT CONTAINER ==*/}
         </Container>
     );
 }
