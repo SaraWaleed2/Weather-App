@@ -181,7 +181,7 @@ export default function WeatherUI() {
                     }}
                 >
                     <Button style={{ color: "white" }} variant="text" onClick={changeLang}>
-                        {locale === 'en' ? 'Arabic' : 'English'}
+                        {locale === 'en' ? 'Arabic' : 'انجليزى'}
                     </Button>
                 </div>
             </div>
